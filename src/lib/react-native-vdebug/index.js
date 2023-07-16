@@ -435,10 +435,10 @@ class VDebug extends PureComponent {
 
     render() {
         return (
-            <View style={{flex: 1}}>
+            <>
                 {this.renderPanel()}
                 {this.renderDebugBtn()}
-            </View>
+            </>
         );
     }
 }

@@ -4,7 +4,9 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import produce from 'immer';
 import {useEffect, useState} from 'react';
-import {nanoid} from 'nanoid';
+import { customAlphabet } from 'nanoid/non-secure'; 
+
+const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 10); 
 import {getStorage, setStorage} from '@/utils/storage';
 import {isSameMediaItem} from '@/utils/mediaItem';
 import shuffle from 'lodash.shuffle';

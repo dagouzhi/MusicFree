@@ -11,7 +11,9 @@ import {
 } from '@/utils/mediaItem';
 import StateMapper from '@/utils/stateMapper';
 import {getStorage, setStorage} from '@/utils/storage';
-import {nanoid} from 'nanoid';
+import { customAlphabet } from 'nanoid/non-secure'; 
+
+const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 10); 
 import {useEffect, useState} from 'react';
 import {FileStat, FileSystem} from 'react-native-file-access';
 import {unlink} from 'react-native-fs';

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import rpx from '@/utils/rpx';
 import {FAB, List} from 'react-native-paper';
-import DocumentPicker from 'react-native-document-picker';
+// import DocumentPicker from 'react-native-document-picker';
 import Loading from '@/components/base/loading';
 import ListItem from '@/components/base/listItem';
 
@@ -71,27 +71,27 @@ export default function PluginList() {
             icon: 'file-plus',
             label: '从本地安装插件',
             async onPress() {
-                try {
-                    const result = await DocumentPicker.pickMultiple();
-                    setLoading(true);
-                    // 初步过滤
-                    const validResult = result?.filter(
-                        _ => _.uri.endsWith('.js') || _.name?.endsWith('.js'),
-                    );
-                    await Promise.all(
-                        validResult.map(_ =>
-                            PluginManager.installPlugin(_.uri),
-                        ),
-                    );
-                    Toast.success('插件安装成功~');
-                } catch (e: any) {
-                    if (e?.message?.startsWith('User')) {
-                        setLoading(false);
-                        return;
-                    }
-                    trace('插件安装失败', e?.message);
-                    Toast.warn(`插件安装失败: ${e?.message ?? ''}`);
-                }
+                // try {
+                //     const result = await DocumentPicker.pickMultiple();
+                //     setLoading(true);
+                //     // 初步过滤
+                //     const validResult = result?.filter(
+                //         _ => _.uri.endsWith('.js') || _.name?.endsWith('.js'),
+                //     );
+                //     await Promise.all(
+                //         validResult.map(_ =>
+                //             PluginManager.installPlugin(_.uri),
+                //         ),
+                //     );
+                //     Toast.success('插件安装成功~');
+                // } catch (e: any) {
+                //     if (e?.message?.startsWith('User')) {
+                //         setLoading(false);
+                //         return;
+                //     }
+                //     trace('插件安装失败', e?.message);
+                //     Toast.warn(`插件安装失败: ${e?.message ?? ''}`);
+                // }
                 setLoading(false);
             },
         },

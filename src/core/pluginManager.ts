@@ -17,7 +17,9 @@ import {compare, satisfies} from 'compare-versions';
 import DeviceInfo from 'react-native-device-info';
 import StateMapper from '@/utils/stateMapper';
 import MediaMeta from './mediaMeta';
-import {nanoid} from 'nanoid';
+import { customAlphabet } from 'nanoid/non-secure'; 
+
+const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 10); 
 import {devLog, errorLog, trace} from '../utils/log';
 import Cache from './cache';
 import {

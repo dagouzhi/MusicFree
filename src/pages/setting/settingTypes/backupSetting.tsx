@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import rpx from '@/utils/rpx';
-import DocumentPicker from 'react-native-document-picker';
+// import DocumentPicker from 'react-native-document-picker';
 import ListItem from '@/components/base/listItem';
 import Toast from '@/utils/toast';
 import Backup from '@/core/backup';
@@ -59,7 +59,7 @@ export default function BackupSetting() {
         try {
             let filePath: string | undefined;
             try {
-                filePath = (await DocumentPicker.pickSingle()).uri;
+                // filePath = (await DocumentPicker.pickSingle()).uri;
             } catch {
                 return;
             }

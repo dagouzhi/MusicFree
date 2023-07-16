@@ -1,4 +1,6 @@
-import {nanoid} from 'nanoid';
+import { customAlphabet } from 'nanoid/non-secure'; 
+
+const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 10); 
 
 const locks = new Map<string, string>();
 

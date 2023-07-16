@@ -1,0 +1,7 @@
+{
+  "projectname": "mini-apps-template",
+  "appid": "music_dgz",
+  "config": "https://hongtangyun-1252095557.cos.ap-chengdu.myqcloud.com/assets/testMiniApps/music_dgz/latest/outputs/app.json",
+  "url": "https://hongtangyun-1252095557.cos.ap-chengdu.myqcloud.com/assets/testMiniApps/music_dgz/latest/outputs/ios/remotes/[name][ext]",
+  "zipUrl": "https://hongtangyun-1252095557.cos.ap-chengdu.myqcloud.com/assets/testMiniApps/music_dgz/latest/outputs/dist.zip"
+}
